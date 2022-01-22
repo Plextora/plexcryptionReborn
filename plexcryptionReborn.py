@@ -125,4 +125,14 @@ def menu():
 
     option = input(">> ")
 
+    if option == "1":
+        encryptText()
+    if option == "2":
+        decryptText()
+    if option == "3":
+        os._exit(os.EX_OK)
+    else:
+        print("Invalid option.")
+        menu()
+
 menu()
