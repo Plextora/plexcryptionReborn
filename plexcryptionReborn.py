@@ -27,3 +27,14 @@ Made by Plextora""")
     os.system('cls' if os.name == 'nt' else 'clear')
 
 startup()
+
+def menu():
+    print("What would you like to do?")
+
+    print("[1] Encrypt text")
+    print("[2] Decrypt text")
+    print("[3] Exit")
+
+    option = input(">> ")
+
+menu()
