@@ -1,10 +1,16 @@
 import time
 import os
+import datetime
 
 def encryptText():
     print("Please enter the text you want to encrypt:")
 
     text = input(">> ")
+
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
+
+    original = text
+
     text = text.upper()
 
     encryption = {
@@ -42,6 +48,12 @@ def encryptText():
     print("Here is your encrypted text:")    
         
     print(text)
+
+    print("In case of the decryption function not working, plexcryption has saved your original text into original" + timestamp + ".txt")
+
+    with open("original" + timestamp + ".txt", "w") as f:
+        f.write(original)
+
 
     menu()
 
@@ -85,7 +97,7 @@ def decryptText():
     
     print("Here is your decrypted text:")
 
-    print(text)
+    print(text) 
 
     menu()
 
